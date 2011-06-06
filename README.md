@@ -4,13 +4,17 @@ Simple node.js wrapper for the [Forrst.com API](http://forrst.com/api).
 
 Work in progress...
 
+## Installation
+
+    npm install forrst
+
 ## Usage
 
 This wapper is at the moment basically an extension of Node.js’s [http.get](http://nodejs.org/docs/v0.4.8/api/http.html#http.get)
 method, below are 2 basic examples of how to use it:
 
 ### Methods with no parameters
-    var forrst = require('./lib/forrst');
+    var forrst = require('forrst');
     
     forrst.stats(function(res){
       res.on('data', function(d) {
@@ -28,7 +32,7 @@ Forrst methods that dont have parameters, such as [stats](http://forrst.com/api#
 that works like a regular node.js http request callback.
 
 ### Methods with parameters
-    var forrst = require('./lib/forrst');
+    var forrst = require('forrst');
     
     forrst.posts.list({post_type:'snap'}, function(res){
       console.log("headers: ", res.headers);
