@@ -1,0 +1,10 @@
+{
+  "name"          : "forrst",
+  "description"   : "Simple wrapper for the Forrst.com API (http://forrst.com/api). ",
+  "url"           : "http://github.com/fczuardi/node-forrst",
+  "keywords"      : ["forrst", "wrapper", "api", "api-client", "forrst.com"],
+  "author"        : "Fabricio C Zuardi",
+  "version"       : "0.1.0",
+  "main"          : "./lib/forrst",
+  "engines"       : { "node": ">= 0.4.1" }
+}
