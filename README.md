@@ -60,6 +60,7 @@ and the second is the callback function. The method names use dots instead of sl
 
 ## TODO / Roadmap
 
+ * require from the developer a custom user-agent
  * add authenticated calls
  * flip the calls to https
  * make the library available as a npm package
