@@ -13,7 +13,7 @@ Work in progress...
 This wapper is at the moment basically an extension of Node.js’s [http.get](http://nodejs.org/docs/v0.4.8/api/http.html#http.get)
 method, below are 2 basic examples of how to use it:
 
-### Methods with no parameters
+### Calling the stats method
     var forrst = require('forrst');
     
     forrst.stats(function(res){
@@ -27,11 +27,12 @@ method, below are 2 basic examples of how to use it:
       console.error(e);
     });
 
-Forrst methods that dont have parameters, such as [stats](http://forrst.com/api#m-stats) and 
-[posts/all](http://forrst.com/api#m-posts-all) are called with only one argument on node-forrst, the callback
-that works like a regular node.js http request callback.
+The stats method is the only one that don't accept parameters, so the only argument to pass to forrst.stats is the callback function.
 
-### Methods with parameters
+For all other methods you pass an object containing the method parameters as the first argument and the callback function as the second argument,
+see the example below:
+
+### Calling any other method
     var forrst = require('forrst');
     
     forrst.posts.list({post_type:'snap'}, function(res){
@@ -46,8 +47,7 @@ that works like a regular node.js http request callback.
       console.error(e);
     });
 
-For all other methods the first argument is an object with the method parameters
-and the second is the callback function. The method names use dots instead of slashes, so posts/list become posts.list
+The method names use dots instead of slashes, so posts/list become posts.list
 
 ## Implemented Methods
 
